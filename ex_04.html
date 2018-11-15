@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181115 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style>
+body {
+  width:100%;
+  height:100%;
+  text-align: center;
+}
+
+</style>
+
+
+<script>
+
+function text_back(){document.getElementById("ex03").innerHTML = "저는 배명주입니다.";}
+
+function text_change(){document.getElementById("ex03").innerHTML = "저는 웹 개발자입니다.";}
+
+function text_big(){document.getElementById("ex03").style.fontSize = "35px";}
+
+function text_small(){document.getElementById("ex03").style.fontSize = "10px";}
+
+function text_hide(){document.getElementById('ex03').style.display="none";}
+
+function text_nothide(){document.getElementById('ex03').style.display="block";}
+</script>
+</head>
+
+<body>
+
+<h1>javascript text attribute</h1>
+
+<strong><p id="ex03" style="fontSize:25px">저는 배명주입니다.</p></strong>
+
+<br><br>
+
+
+<button type="button" onclick="text_back()">텍스트 돌리기</button>&nbsp&nbsp
+
+<button type="button" onclick="text_change()">텍스트 바꾸기</button>&nbsp&nbsp
+
+<button type="button" onclick="text_big()">크게</button>&nbsp&nbsp
+
+<button type="button" onclick="text_small()">작게</button>&nbsp&nbsp
+<br><br>
+
+<button type="button" onclick="text_hide()">사라지기</button>&nbsp&nbsp
+
+<button type="button" onclick="text_nothide()">나타나기</button>
+
+
+</body>
+</html>
