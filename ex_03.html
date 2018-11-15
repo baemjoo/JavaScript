@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181115 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style>
+body {
+  width:100%;
+  height:100%;
+  text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>javascript text attribute</h1>
+
+<strong><p id="ex03" >저는 배명주입니다.</p></strong>
+
+<br><br>
+
+
+<button type="button" onclick='document.getElementById("ex03").innerHTML = "저는 배명주입니다."'>텍스트 돌리기</button>&nbsp&nbsp
+
+<button type="button" onclick='document.getElementById("ex03").innerHTML = "저는 웹 개발자입니다."'>텍스트 바꾸기</button>&nbsp&nbsp
+
+<button type="button" onclick='document.getElementById("ex03").style.fontSize = "35px"'>크게</button>&nbsp&nbsp
+
+<button type="button" onclick='document.getElementById("ex03").style.fontSize = "20px"'>작게</button>&nbsp&nbsp
+<br><br>
+
+<button type="button" onclick="document.getElementById('ex03').style.display='none'">사라지기</button>&nbsp&nbsp
+
+<button type="button" onclick="document.getElementById('ex03').style.display='block'">나타나기</button>
+
+
+</body>
+</html>
