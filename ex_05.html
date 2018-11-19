@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181119 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+
+<style>
+  body {
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>JavaScript window alert</h1>
+
+<p> var <strong>x</strong>  =  5 </p>
+<br>
+<p> var <strong>y</strong>  =  10 </p>
+<br>
+<p> var <strong>z</strong>  =  x + y</p>
+<br>
+<p> 결과는 ? </p>
+<br>
+<p><button type="button" onclick="add_xy()">결과보기</button></p>
+
+<script>
+var x = 5;
+var y = 10;
+var z = x+y;
+
+
+function add_xy(){window.alert(z);}
+</script>
+</body>
+</html>
