@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181119 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style>
+body{
+  text-align:center;
+}
+p {
+  fontsize: 20px;
+}</style>
+</head>
+<body>
+
+  <h1> JavaScript object</h1>
+  <br>
+
+ <p>성이 알고싶어요 &nbsp&nbsp <button type="button" onclick="alert_firstName()">성</button></p> <br>
+
+ <p>이름이 알고싶어요&nbsp&nbsp<button type="button" onclick="alert_lastName()">이름</button></p><br>
+
+ <p>풀네임이 알고싶어요&nbsp&nbsp<button type="button" onclick="alert_fullName()">이름</button></p><br>
+
+ <p>나이가 알고싶어요&nbsp&nbsp<button type="button" onclick="alert_age()">나이</button></p><br>
+
+ <p>성별을 알고싶어요&nbsp&nbsp<button type="button" onclick="alert_sex()">성별</button></p><br>
+
+
+ <script>
+ var person = {
+   firstName : "Bae",
+   lastName : "MyungJoo",
+   age : 22,
+   sex : "여자",
+   fullName : function() { return person.firstName +" "+ person.lastName; }
+ };
+
+ function alert_firstName(){window.alert(person.firstName);}
+ function alert_lastName(){window.alert(person.lastName);}
+ function alert_fullName(){window.alert(person.fullName()); }
+ function alert_age(){window.alert(person.age);}
+ function alert_sex(){window.alert(person.sex);}
+ </script>
+
+</body>
+
+</html>
