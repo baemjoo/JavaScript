@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181121 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style></style>
+</head>
+
+<body>
+
+<h1>JavaScript Arrays</h1><br><br>
+
+<h3> 1) Arrays 선언하기</h3>
+<p id = apartment style="color:red;"></p><br><br><br>
+
+<h3> 2) Arrays 정렬하기</h3>
+<p id = apartmentsort style="color:red;"></p><br><br><br>
+
+<h3> 3) Arrays 확인하기</h3>
+<p id = apartmentresult style="color:red;"></p><br><br><br>
+
+<h3> 4) Arrays 요소 추가하기</h3>
+
+<button onclick="add_hyundai()">현대아파트 추가하기</button> &nbsp&nbsp
+<button onclick="add_hoban()">호반베르디움 추가하기</button> &nbsp&nbsp
+<button onclick="add_exlu()">엑슬루타워 추가하기</button> &nbsp&nbsp
+
+<br>
+<p id = apart_array1></p>
+
+<br><br><br>
+
+<h3> 5) Arrays 요소 삭제하기</h3>
+
+<button onclick="apart_pop()">Array 요소 pop out</button> &nbsp&nbsp
+
+<br>
+<p id = apart_array2></p>
+
+<br><br><br>
+
+<h3> 6) Arrays 요소 Shift</h3>
+
+<button onclick="apart_shift()">Array 요소 Shift</button> &nbsp&nbsp
+
+<br>
+<p id = apart_array2></p>
+
+<br><br><br>
+
+
+
+
+
+
+
+</body>
+<script>
+var apartment = ["자이","힐스테이트","아이파크","동아","대주"];
+var text , i , alen;
+
+//선언
+document.getElementById("apartment").innerHTML = "var apartment = [\"자이\",\"힐스테이트\",\"아이파크\",\"동아\",\"대주\",]";
+
+//정렬
+document.getElementById("apartmentsort").innerHTML = "apartment.sort()"
+apartment.sort();
+
+//정렬된 apartment 배열 보기
+text = "<ul>";
+  for(i=0;i<apartment.length;i++)
+  {
+    text += "<li>" + apartment[i] + "</li>";
+  }
+  text += "</ul>";
+document.getElementById("apartmentresult").innerHTML = text;
+
+//array에 push
+document.getElementById("apart_array1").innerHTML = apartment;
+document.getElementById("apart_array2").innerHTML = apartment;
+
+function add_hyundai()
+{
+  apartment.push("현대");
+  document.getElementById("apart_array1").innerHTML = apartment;
+  document.getElementById("apart_array2").innerHTML = apartment;
+}
+
+function add_hoban()
+{
+  apartment.push("호반베르디움");
+  document.getElementById("apart_array1").innerHTML = apartment;
+  document.getElementById("apart_array2").innerHTML = apartment;
+}
+
+function add_exlu()
+{
+  apartment.push("엑슬루타워");
+  document.getElementById("apart_array1").innerHTML = apartment;
+  document.getElementById("apart_array2").innerHTML = apartment;
+}
+
+function apart_pop()
+{
+  apartment.pop();
+  document.getElementById("apart_array1").innerHTML = apartment;
+  document.getElementById("apart_array2").innerHTML = apartment;
+}
+</script>
+</html>
