@@ -48,7 +48,15 @@
 <br>
 <pre> Array 요소 : <p id = apart_array3></p></pre>
 <pre> Shift 요소 : <p id = apart_shift></p></pre>
+<br><br><br>
 
+<h3> 6) Arrays 요소 unShift</h3>
+
+<button onclick="apart_unshift()">Array 요소 UnShift</button> &nbsp&nbsp
+
+<br>
+<pre> Array 요소 : <p id = apart_array4></p></pre>
+<pre> UnShift 요소 : <p id = apart_unshift></p></pre>
 <br><br><br>
 
 
@@ -82,6 +90,7 @@ document.getElementById("apartmentresult").innerHTML = text;
 document.getElementById("apart_array1").innerHTML = apartment;
 document.getElementById("apart_array2").innerHTML = apartment;
 document.getElementById("apart_array3").innerHTML = apartment;
+document.getElementById("apart_array4").innerHTML = apartment;
 
 
 function add_hyundai()
@@ -90,6 +99,7 @@ function add_hyundai()
   document.getElementById("apart_array1").innerHTML = apartment;
   document.getElementById("apart_array2").innerHTML = apartment;
   document.getElementById("apart_array3").innerHTML = apartment;
+  document.getElementById("apart_array4").innerHTML = apartment;
 }
 
 function add_hoban()
@@ -98,6 +108,7 @@ function add_hoban()
   document.getElementById("apart_array1").innerHTML = apartment;
   document.getElementById("apart_array2").innerHTML = apartment;
   document.getElementById("apart_array3").innerHTML = apartment;
+  document.getElementById("apart_array4").innerHTML = apartment;
 }
 
 function add_exlu()
@@ -106,6 +117,7 @@ function add_exlu()
   document.getElementById("apart_array1").innerHTML = apartment;
   document.getElementById("apart_array2").innerHTML = apartment;
   document.getElementById("apart_array3").innerHTML = apartment;
+  document.getElementById("apart_array4").innerHTML = apartment;
 }
 
 function apart_pop()
@@ -114,6 +126,7 @@ function apart_pop()
   document.getElementById("apart_array1").innerHTML = apartment;
   document.getElementById("apart_array2").innerHTML = apartment;
   document.getElementById("apart_array3").innerHTML = apartment;
+  document.getElementById("apart_array4").innerHTML = apartment;
 }
 
 var arr_shift="";
@@ -122,6 +135,14 @@ function apart_shift()
   arr_shift += apartment.shift();
   document.getElementById("apart_array3").innerHTML = apartment;
   document.getElementById("apart_shift").innerHTML = arr_shift;
+}
+
+var arr_unshift="";
+function apart_unshift()
+{
+  arr_unshift += apartment.unshift("미래지향");
+  document.getElementById("apart_array4").innerHTML = apartment;
+  document.getElementById("apart_unshift").innerHTML = arr_unshift;
 }
 </script>
 </html>
