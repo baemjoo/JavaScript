@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181121 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style>
+body{
+  text-align:center;
+} </style>
+</head>
+
+<body>
+
+<h1> javascript string method</h1>
+<br><br>
+
+<h2>1) 문장 안에 single , double quote, backslash 넣기</h2><br>
+<p id = singlequote></p>
+<p id = doublequote></p>
+<p id = backslash_ex></p>
+<br><br>
+
+
+<h2>2) String과 Object의 차이점</h2><br>
+
+<p><em>example 1)</em> var <strong>x</strong> = "Zoo" , var <strong>y</strong> = new String("Zoo")일 때</p>
+<p id = x_y_type style="color:red;"></p><br>
+
+<p><em>example 2)</em> var <strong>x</strong> = "Zoo" , var <strong>y</strong> = new String("Zoo")일 때</p>
+<p id = x_y_equalval style="color:red;"></p>
+<p><strong>x</strong>와 <strong>y</strong>는 같은 값을 가지기 때문</p><br>
+
+<p><em>example 3)</em> var <strong>x</strong> = "Zoo" , var <strong>y</strong> = new String("Zoo")일 때</p>
+<p id = x_y_equaltype style="color:red;"></p>
+<p><strong>x</strong>와 <strong>y</strong>는 다른 type이기 때문에 (string/object)</p><br>
+
+<p><em>example 4)</em> var <strong>y</strong> = new String("Zoo"), var <strong>z</strong> = new String("Zoo")일 때</p>
+<p id = y_z_type  style="color:red;"></p><br>
+
+<p><em>example 5)</em> var <strong>y</strong> = new String("Zoo"), var <strong>z</strong> = new String("Zoo")일 때</p>
+<p id = y_z_equaltype  style="color:red;"></p>
+<p><strong>y</strong>와 <strong>z</strong>는 다른 object이기 때문에 (string/object)</p><br><br>
+
+</body>
+<script>
+//1) 문장 안에 single , double quote, backslash 넣기
+var singlequote = "\'나는\' 지금 몹시 배가 고프다";
+document.getElementById("singlequote").innerHTML = singlequote;
+var doublequote = "\"나는\" 지금 몹시 배가 고프다";
+document.getElementById("doublequote").innerHTML = doublequote;
+var backslash_ex = "\\나는\\ 지금 몹시 배가 고프다";
+document.getElementById("backslash_ex").innerHTML = backslash_ex;
+
+//2) String과 Object의 차이점
+var x = "Zoo";
+var y = new String("Zoo");
+var z = new String("Zoo");
+document.getElementById("x_y_type").innerHTML = "typeof의 결과값 x의 타입은 " + typeof x + "&nbsp&nbsp" + "y의 타입은 " + typeof y;
+document.getElementById("x_y_equalval").innerHTML = "==의 결과값  " + (x==y) ;
+document.getElementById("x_y_equaltype").innerHTML = "===의 결과값  " + (x===y) ;
+document.getElementById("y_z_type").innerHTML = "typeof의 결과값 y의 타입은 " + typeof y + "&nbsp&nbsp" + "z의 타입은 " + typeof z;
+document.getElementById("y_z_equaltype").innerHTML = "===의 결과값  " + (y===z) ;
+
+</script>
+</html>
