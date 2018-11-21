@@ -46,7 +46,8 @@
 <button onclick="apart_shift()">Array 요소 Shift</button> &nbsp&nbsp
 
 <br>
-<p id = apart_array2></p>
+<pre> Array 요소 : <p id = apart_array3></p></pre>
+<pre> Shift 요소 : <p id = apart_shift></p></pre>
 
 <br><br><br>
 
@@ -80,12 +81,15 @@ document.getElementById("apartmentresult").innerHTML = text;
 //array에 push
 document.getElementById("apart_array1").innerHTML = apartment;
 document.getElementById("apart_array2").innerHTML = apartment;
+document.getElementById("apart_array3").innerHTML = apartment;
+
 
 function add_hyundai()
 {
   apartment.push("현대");
   document.getElementById("apart_array1").innerHTML = apartment;
   document.getElementById("apart_array2").innerHTML = apartment;
+  document.getElementById("apart_array3").innerHTML = apartment;
 }
 
 function add_hoban()
@@ -93,6 +97,7 @@ function add_hoban()
   apartment.push("호반베르디움");
   document.getElementById("apart_array1").innerHTML = apartment;
   document.getElementById("apart_array2").innerHTML = apartment;
+  document.getElementById("apart_array3").innerHTML = apartment;
 }
 
 function add_exlu()
@@ -100,6 +105,7 @@ function add_exlu()
   apartment.push("엑슬루타워");
   document.getElementById("apart_array1").innerHTML = apartment;
   document.getElementById("apart_array2").innerHTML = apartment;
+  document.getElementById("apart_array3").innerHTML = apartment;
 }
 
 function apart_pop()
@@ -107,6 +113,15 @@ function apart_pop()
   apartment.pop();
   document.getElementById("apart_array1").innerHTML = apartment;
   document.getElementById("apart_array2").innerHTML = apartment;
+  document.getElementById("apart_array3").innerHTML = apartment;
+}
+
+var arr_shift="";
+function apart_shift()
+{
+  arr_shift += apartment.shift();
+  document.getElementById("apart_array3").innerHTML = apartment;
+  document.getElementById("apart_shift").innerHTML = arr_shift;
 }
 </script>
 </html>
