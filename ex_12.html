@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181123 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style>
+body {text-align:center;}
+</style>
+</head>
+
+<body>
+
+<h1> 숫자 맞추기 게임 </h1>
+
+<br>
+
+<p>숫자는 <strong style="color:red">1-10</strong> 까지의 수 입니다.</p>
+
+<input id="my_ans" type="text">
+<button type="button" onclick="confirm_ans()">확인하기</button>
+
+<p>힌트 ▼</p>
+<p id="hint"></p>
+
+
+</body>
+
+<script>
+
+var answer = Math.floor(Math.random() * 10) + 1 ;  // random num 은 1 to 10
+
+function confirm_ans() {
+
+    var message , ans,lifemessage;
+    message = document.getElementById("hint");
+    message.innerHTML = "";
+
+    ans = document.getElementById("my_ans").value;
+
+    try {
+
+        if(ans == "")  throw "숫자를 입력해주세요";
+        if(isNaN(ans)) throw "숫자를 입력해주세요";
+        ans = Number(ans);
+        if(ans < answer)
+        {
+          throw "입력하신 수가 정답보다 작습니다.";
+        }
+        if(ans > answer)
+        {
+          throw "입력하신 수가 정답보다 큽니다.";
+        }
+        if(ans == answer)  throw "정답!"
+    }
+    catch(err) {
+        message.innerHTML = err;
+    }
+
+}
+
+</script>
+</html>
