@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181123 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style>
+body { text-align:center;}</style>
+</head>
+
+<body>
+
+
+<h1> Today </h1> <br><br>
+
+<h1>
+<!-- p element 요소를 사용 -->
+<p style="color:red;"></p>
+<p style="color:orange;"></p>
+<p style="color:yellow;"></p>
+
+<!-- p class 속성을 사용 -->
+<p class="test" style="color:green;"></p>
+<p class="test" style="color:blue;"></p>
+<p class="test" style="color:navy;"></p>
+<p class="test" style="color:purple;"></p>
+</h1>
+</body>
+<script>
+var age = 22;
+
+var d = new Date();
+
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
+//p element 요소를 사용한
+document.getElementsByTagName("p")[0].innerHTML = d.getFullYear();
+document.getElementsByTagName("p")[1].innerHTML = months[d.getMonth()];
+document.getElementsByTagName("p")[2].innerHTML = d.getDate();
+
+//p class 속성을 사용한
+document.getElementsByClassName("test")[0].innerHTML = days[d.getDay()];
+document.getElementsByClassName("test")[1].innerHTML = d.getHours();
+document.getElementsByClassName("test")[2].innerHTML = d.getMinutes();
+document.getElementsByClassName("test")[3].innerHTML = d.getSeconds();
+
+
+</script>
+</html>
