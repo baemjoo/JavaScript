@@ -37,4 +37,4 @@ function event_btn(){
   document.body.style.backgroundColor= randcolor;
 }
 
-e_btn.addEventListener('cick',event_btn);
+e_btn.addEventListener('click',event_btn);
