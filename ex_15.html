@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181206 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style> </style>
+</head>
+<body>
+</body>
+
+
+<script>
+function printName(firstname) {
+      var myname = "jisu";
+      return myname + " ," +  firstname;
+}
+
+function run(firstname) {
+     firstname = firstname || "Youn";
+     var result = printName(firstname);
+     console.log(result);
+}
+run();
+
+
+
+var timer=1;
+// setTimeout은 window의 전역객체라서 window 생략가능
+function out_timer(){
+  setTimeout(function(){
+    console.log("timerout : "+timer);
+  },10000);
+}
+out_timer();
+
+function inter_timer(){
+  setInterval(function(){
+    console.log("interval : "+timer++);
+  },1000);
+}
+inter_timer();
+
+
+
+</script>
+</html>
