@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181206 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style> </style>
+</head>
+
+<body>
+
+  <div class="outside">
+    outside element
+  </div>
+
+
+<h3>inline event handlers // don't use these</h3>
+<div>
+  <button onclick="randchange()" type="button" name="rand_btn" width="200px" height="200px">
+    랜덤
+  </button>
+&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button onclick="standard()" type="button" name="std_btn" width="200px" height="200px">
+    원래대로
+  </button>
+</div>
+
+<h3>addEventListener and removeEventListener</h3>
+<div>
+  <button onclick="event_btn()" type="button" name="e_btn" width="200px" height="200px">
+    랜덤
+  </button>
+&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button onclick="standard()" type="button" name="std_btn" width="200px" height="200px">
+    원래대로
+  </button>
+</div>
+
+
+
+</body>
+
+<script src="./ex_16.js">
+
+</script>
+</html>
