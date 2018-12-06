@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>181206 - html</title>
+<!--파일이 UTF-8로 저장되고 웹브라우저가 UTF-8로 열도록-->
+<meta charset="utf-8">
+<style> </style>
+</head>
+<body>
+
+<p id="result"></p>
+
+<p id="val"></p>
+
+
+<p id ="a_chk"></p>
+
+
+<p id = "split_res"></p>
+<p id="split_type"></p>
+</body>
+
+<script>
+
+const name ="crong";
+const result = name || "juan";
+
+var value = "";
+var res = value || "majeon";
+
+
+// if else 문을 사용할 필요 없이 OR을 이용하여 간단하게 구현할 수 있다.
+document.getElementById("result").innerHTML = result;
+document.getElementById("val").innerHTML = res;
+
+
+// 같은 사례로 해당 값이 있느냐 없느냐 체크도 가능
+var a ="";
+var a_chk = (a) ? "a has value" : "a hasn't value";
+document.getElementById("a_chk").innerHTML = a_chk;
+
+
+// split example
+// split 함수는 배열을 만들어주는 함수
+// ("")을 적용하면 모든 문자가 나눠짐
+var split_res = "ab:cd:ef".split("");
+document.getElementById("split_res").innerHTML = split_res;
+document.getElementById("split_type").innerHTML=toString.call(split_res);
+
+
+</script>
+</html>
