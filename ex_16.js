@@ -29,7 +29,8 @@ function standard(){
 }
 
 
-var e_btn = document.querySelector('e_btn');
+var e_randbtn = document.getElementById('e_btn');
+var e_stdbtn = document.getElementById('s_btn');
 
 function event_btn(){
   var randcolor = 'rgb('+random(255)+','+random(255)+','+random(255)+')';
@@ -37,4 +38,5 @@ function event_btn(){
   document.body.style.backgroundColor= randcolor;
 }
 
-e_btn.addEventListener('click',event_btn);
+e_randbtn.addEventListener('click',event_btn);
+e_stdbtn.addEventListener('click',standard);
