@@ -1,3 +1,4 @@
+
 var el = document.querySelector(".outside");
 
 el.addEventListener("click", function(e){
@@ -29,8 +30,8 @@ function standard(){
 }
 
 
-var e_randbtn = document.getElementById('e_btn');
-var e_stdbtn = document.getElementById('s_btn');
+var e_randbtn = document.querySelector('.e_btn');
+var e_stdbtn = document.querySelector('.s_btn');
 
 function event_btn(){
   var randcolor = 'rgb('+random(255)+','+random(255)+','+random(255)+')';
