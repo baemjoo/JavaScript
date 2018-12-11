@@ -1,0 +1,5 @@
+{
+ "name" : "myungjoo",
+ "age" : "22",
+ "favorites" : ["lol","coffee"]
+}
