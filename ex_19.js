@@ -30,3 +30,12 @@ console.log("for문 value");
 for(value in myFriend){
   console.log(value);
 }
+
+
+//결과값으로 key값이 배열값으로 나왔다.
+console.log(Object.keys(myFriend));
+
+//탐색이 필요한 경우 Object.keys함수와 forEach로 탐색하는 방법도 많이 쓰인다.
+Object.keys(myFriend).forEach(function (v) {
+  console.log(myFriend[v]);
+});
