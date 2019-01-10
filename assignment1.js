@@ -1,4 +1,3 @@
-
 const widget = {
     "debug": "on",
     "window": {
@@ -27,16 +26,28 @@ const widget = {
 }
 
 
+// assignment1
+// type이 number인 요소만 뽑아 배열로 만드는 것
+
 var list = []; //push로 add
 
-Object.keys(widget).forEach(function (key) {
-  console.log("key");
-  console.log(widget[key]);
+function process1(object)
+{
+Object.keys(object).forEach(function (key) {
 
-  if(typeof(Object[key]) === 'number')
+  if(typeof object[key] == "number")
   {
+    console.log(object[key] + "is add");
     list.push(key);
   }
+  else if(typeof object[key] == "object")
+  {
+    console.log(object[key] + "is recall function");
+    process1(object[key]);
+  }
 });
+}
+process1(widget);
 
-console.log(list);
+console.log("result is : "+list);
+document.getElementById("result").innerHTML = list.toString();;
